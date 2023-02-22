@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/article")
 public class ArticleController
 {
-
+	
 }

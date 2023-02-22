@@ -19,15 +19,21 @@ import com.adem.springdata.repositories.ProviderRepository;
 @Controller
 @RequestMapping("/provider")
 public class ProviderController
-{	
+{
 	private final ProviderRepository providerRepository;
 	
+	public ProviderController()
+	{
+		this.providerRepository = null;
+		
+	}
+
 	@Autowired
 	public ProviderController(ProviderRepository providerRepository)
 	{
 		this.providerRepository = providerRepository;
 	}
-    
+
     @GetMapping("list")
     //@ResponseBody
     public String listProviders(Model model)

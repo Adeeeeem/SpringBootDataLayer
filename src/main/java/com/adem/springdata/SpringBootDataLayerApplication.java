@@ -1,9 +1,13 @@
 package com.adem.springdata;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//import com.adem.entities.Provider;
+//import com.adem.springdata.entities.Provider;
+//import com.adem.springdata.repositories.ProviderRepository;
+
+@EnableAutoConfiguration
 
 @SpringBootApplication
 public class SpringBootDataLayerApplication
