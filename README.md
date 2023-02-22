@@ -65,4 +65,4 @@ The following dependencies were used in the creation of this project:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. Feel free to use this code in your own projects or modify it to fit your specific needs.
+This project is licensed under the MIT License - see the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) file for details. Feel free to use this code in your own projects or modify it to fit your specific needs.
