@@ -59,9 +59,9 @@ The following dependencies were used in the creation of this project:
 
 ## Available Endpoints
 
-http://localhost:8081/ : welcome interface
-http://localhost:8081/provider/list : list of providers interface
-http://localhost:8081/provider/add : add a provider interface
+- http://localhost:8081/ : welcome interface
+- http://localhost:8081/provider/list : list of providers interface
+- http://localhost:8081/provider/add : add a provider interface
 
 ## License
 
