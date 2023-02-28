@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Providers</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,6 +27,7 @@
 										<th>Name</th>
 										<th>Email</th>
 										<th>Address</th>
+										<th>Details</th>
 										<th>Edit</th>
 										<th>Delete</th>
 									</tr>
@@ -36,6 +37,9 @@
 										<td th:text="${provider.name}"></td>
 										<td th:text="${provider.email}"></td>
 										<td th:text="${provider.address}"></td>
+										<a th:href="@{/provider/show/{id}(id=${provider.id})}" class="btn btn-primary">
+											<i class="fas fa-user-edit ml-2"></i>Details
+										</a>
 										<td>
 											<a th:href="@{/provider/edit/{id}(id=${provider.id})}" class="btn btn-warning">
 												<i class="fas fa-user-edit ml-2"></i>
