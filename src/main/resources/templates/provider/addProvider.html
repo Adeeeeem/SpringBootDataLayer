@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Add Provider</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,7 +14,7 @@
 		<div class="card">
 			<div class="card-body">
 				<div class="col-md-10">
-					<form  th:action="@{/provider/add}" th:object="${provider}" method="post">
+					<form th:action="@{/provider/add}" th:object="${provider}" method="POST">
 						<div class="row">
 							<div class="form-group col-md-8">
 								<label for="name" class="col-form-label">Name</label>
