@@ -3,9 +3,11 @@ package com.adem.springdata.services;
 import com.adem.springdata.entities.Provider;
 import com.adem.springdata.repositories.ProviderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProviderService
 {
 	private final ProviderRepository providerRepository;
