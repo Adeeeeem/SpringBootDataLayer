@@ -17,16 +17,19 @@ import org.hibernate.annotations.OnDeleteAction;
 public class Article
 {
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;
 
-    @NotBlank(message = "Label is mandatory")
-    @Column(name = "label")
-    private String label;
- 
-    @Column(name = "price")
-    private float price;
-    
+	@NotBlank(message = "Label is mandatory")
+	@Column(name = "label")
+	private String label;
+
+	@Column(name = "price")
+	private float price;
+
+	@Column(name = "picture")
+	private String picture;
+	
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "provider_id", nullable = false)
 	@OnDelete(action = OnDeleteAction.CASCADE)
@@ -34,12 +37,12 @@ public class Article
 	
 	public Article() {}
 
-    public Article(String label, float price, String picture)
-    {
-        this.price = price;
-        this.label = label;
-        this.picture = picture;
-    }
+	public Article(String label, float price, String picture)
+	{
+		this.price = price;
+		this.label = label;
+		this.picture = picture;
+	}
 
 	public long getId()
 	{
@@ -89,5 +92,11 @@ public class Article
 	public void setProvider(Provider provider)
 	{
 		this.provider = provider;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "Article [id=" + id + ", label=" + label + ", price=" + price + ", picture=" + picture + ", provider=" + provider + "]";
 	}
 }
