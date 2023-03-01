@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.validation.Valid;
 
+import com.adem.springdata.entities.Article;
+import com.adem.springdata.services.ProviderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,6 +28,7 @@ public class ProviderController
 	public ProviderController()
 	{
 		this.providerRepository = null;
+		this.providerService = null;
 	}
 
 	@Autowired
