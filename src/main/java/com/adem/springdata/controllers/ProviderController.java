@@ -21,11 +21,10 @@ import com.adem.springdata.repositories.ProviderRepository;
 public class ProviderController
 {
 	private final ProviderRepository providerRepository;
-	
+
 	public ProviderController()
 	{
 		this.providerRepository = null;
-		
 	}
 
 	@Autowired
