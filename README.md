@@ -3,9 +3,13 @@
 ## Overview
 
 This project is a demonstration of using Spring Boot to create a data layer for a MySQL database. The project includes the creation of entities, repositories, and controllers for managing entities and views. The database schema is automatically generated, and CRUD (create, read, update, delete) operations are implemented. Operations like ManyToOne and OneToMany are also included.
-The project was created using Spring Tool Suite (STS) with Maven 2.6.5 and Java version 17.
+The project was created using IntelliJ IDEA Community with Maven 2.6.5 and Java version 11.0.18.
 
-This Spring Boot project is designed to create and manage a MySQL database using Spring Data JPA. The application allows you to create, read, update, and delete entities with a user interface built using Thymeleaf. The following features have been covered as part of this project:
+This Spring Boot project is designed to create and manage a MySQL database using Spring Data JPA. The application allows you to create, read, update, and delete entities with a user interface built using Thymeleaf. Spring Security has also been added to secure the application.
+
+Additionally, a web template has been integrated into the project providing a user-friendly interface. Furthermore, the REST API collection has been included in the root folder of the project under the name "Rest Spring Boot Data Layer.postman_collection.json". The collection has been tested with Postman and can be used to interact with the REST API endpoints provided by the application.
+
+The following features have been covered as part of this project :
 
 - Creating entities with `@Entity` annotations
 - Creating repositories with `@Repository` annotations
@@ -19,17 +23,21 @@ This Spring Boot project is designed to create and manage a MySQL database using
 
 ## Getting Started
 
-To run the project, you will need to have Maven and Java JDK 17 installed on your system. You can use your preferred Integrated Development Environment (IDE) to run the project. Here are the steps to run the project in Spring Tool Suite (STS):
+To run the project, you will need to have Maven and Java JDK 11 installed on your system. You can use your preferred Integrated Development Environment (IDE) to run the project. Here are the steps to run the project in IntelliJ IDEA Community:
 
 ### Step 1
 
-Open STS and import the project.
+Open IntelliJ IDEA Community and import the project.
 
 ### Step 2
 
-Right-click on the project and select "Run As" > "Spring Boot App".
+Run the command `mvn clean install` to download the dependencies and build the project.
 
 ### Step 3
+
+Run the command `mvn spring-boot:run` to start the application.
+
+### Step 4
 
 Once the application is running, you can access it by navigating to http://localhost:8081 in your web browser.
 
@@ -56,12 +64,36 @@ The following dependencies were used in the creation of this project:
 - Thymeleaf
 - Spring Data JPA
 - MySQL Driver
+- Spring Boot Starter Validation
+- Spring Security Web
+- Thymeleaf Extras Spring Security 5
+- Spring Security Config
 
 ## Available Endpoints
 
-- http://localhost:8081/ : welcome interface
-- http://localhost:8081/provider/list : list of providers interface
-- http://localhost:8081/provider/add : add a provider interface
+#Web Interface:
+
+- http://localhost:8081/ : Home page which serves as the index of the template.
+- http://localhost:8081/provider/list : Interface to list providers with CRUD buttons.
+- http://localhost:8081/provider/add : Interface to add a new provider.
+- http://localhost:8081/provider/edit/{id} : Interface to edit a provider. Replace {id} in the URL with the provider's ID.
+- http://localhost:8081/provider/delete/{id} : Interface to delete a provider. Replace {id} in the URL with the provider's ID.
+- http://localhost:8081/provider/show/{id} : Interface to show details of a provider. Replace {id} in the URL with the provider's ID.
+- http://localhost:8081/article/list : Interface to list articles with CRUD buttons.
+- http://localhost:8081/article/add : Interface to add a new article.
+- http://localhost:8081/article/edit/{id} : Interface to edit an article. Replace {id} in the URL with the article's ID.
+- http://localhost:8081/article/delete/{id} : Interface to delete an article. Replace {id} in the URL with the article's ID.
+- http://localhost:8081/article/show/{id} : Interface to show details of an article. Replace {id} in the URL with the article's ID.
+- http://localhost:8081/role/list : Interface to list roles.
+- http://localhost:8081/role/add : Interface to add a new role.
+
+#REST API:
+
+- http://localhost:8081/rest/provider/list : REST API endpoint to list providers.
+- http://localhost:8081/rest/provider/add : REST API endpoint to add a new provider.
+- http://localhost:8081/rest/provider/edit/{id} : REST API endpoint to edit a provider. Replace {id} in the URL with the provider's ID.
+- http://localhost:8081/rest/provider/delete/{id} : REST API endpoint to delete a provider. Replace {id} in the URL with the provider's ID.
+- http://localhost:8081/rest/provider/show/{id} : REST API endpoint to show details of a provider. Replace {id} in the URL with the provider's ID.
 
 ## License
 
