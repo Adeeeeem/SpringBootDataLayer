@@ -43,7 +43,7 @@ Once the application is running, you can access it by navigating to http://local
 
 Note that the port number has been changed from the default 8080 to 8081.
 
-##How to configure MySQL username, password and database name
+## How to configure MySQL username, password and database name
 
 To configure MySQL username, password and database name, open the application.properties file in the project and update the following properties :
 
@@ -71,7 +71,7 @@ The following dependencies were used in the creation of this project:
 
 ## Available Endpoints
 
-#Web Interface:
+## Web Interface:
 
 - http://localhost:8081/ : Home page which serves as the index of the template.
 - http://localhost:8081/provider/list : Interface to list providers with CRUD buttons.
@@ -87,7 +87,7 @@ The following dependencies were used in the creation of this project:
 - http://localhost:8081/role/list : Interface to list roles.
 - http://localhost:8081/role/add : Interface to add a new role.
 
-#REST API:
+## REST API:
 
 - http://localhost:8081/rest/provider/list : REST API endpoint to list providers.
 - http://localhost:8081/rest/provider/add : REST API endpoint to add a new provider.
