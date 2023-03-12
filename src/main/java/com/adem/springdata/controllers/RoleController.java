@@ -49,13 +49,12 @@ public class RoleController
 	@PostMapping("add")
 	public String addRole(@RequestParam("name") String name)
 	{
-
 		System.out.println(name);
 
 		Role r = new Role(name);
 		Role rSaved = roleRepository.save(r);
 
-		System.out.println("name = " + rSaved);
+		System.out.println("role = " + rSaved);
 
 		return "redirect:list";
 	}

@@ -14,12 +14,12 @@ public class Role
 	@Column(name = "name")
 	private String name;
 
-	public Role(String role)
+	public Role()
 	{
-		this.name = name;
+		this.name = "";
 	}
 
-	public Role()
+	public Role(String name)
 	{
 		this.name = name;
 	}

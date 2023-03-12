@@ -1,4 +1,4 @@
-package com.adem.springdata.controllers;
+/*package com.adem.springdata.controllers;
 
 import com.adem.springdata.entities.User;
 import com.adem.springdata.services.UserService;
@@ -35,3 +35,4 @@ public class LoginController
 		return "Added";
 	}
 }
+*/
