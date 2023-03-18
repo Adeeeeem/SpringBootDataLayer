@@ -20,7 +20,11 @@ public class ProviderService
 
 	public List<Provider> getAllProviders()
 	{
-		return (List<Provider>)providerRepository.findAll();
+		List <Provider> lp = (List <Provider>) providerRepository.findAll();
+		
+		if(lp.size() == 0)
+			lp = null;
+		return lp;
 	}
 
 	public Provider persistProvider(Provider provider)
