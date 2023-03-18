@@ -1,4 +1,4 @@
-/*package com.adem.springdata.services;
+package com.adem.springdata.services;
 
 import com.adem.springdata.entities.Role;
 import com.adem.springdata.entities.User;
@@ -43,4 +43,3 @@ public class UserService
 		userRepository.save(user);
 	}
 }
-*/
